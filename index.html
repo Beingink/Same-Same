@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Same Same: 50 B2B taglines, one vocabulary</title>
+<meta name="description" content="Fifty B2B brands, one shared vocabulary. See how many companies have claimed the same tagline words.">
+<meta property="og:title" content="Same Same: 50 B2B taglines, one vocabulary">
+<meta property="og:description" content="46 of 50 B2B brands share at least one tagline word with a rival. Shuffle through the echoes.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ECEEF1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="wordmark">Same Same<span>but different?</span></div>
+    <div class="meta">50 B2B brands, as of September 2026</div>
+  </header>
+
+  <p class="intro" id="intro">Fifty B2B brands. Fifty chances to say something only they could say.</p>
+
+  <div class="toggle" role="group" aria-label="What to compare">
+    <button type="button" id="mLines" aria-pressed="true">Shared lines</button>
+    <button type="button" id="mWords" aria-pressed="false">Shared words</button>
+  </div>
+
+  <div class="stage fresh" id="stage" aria-live="polite">
+    <div id="ghosts" aria-hidden="true"></div>
+    <h1 class="ph phrase" id="phrase">…</h1>
+  </div>
+
+  <div class="tally">
+    <div class="count" id="count"></div>
+    <button type="button" class="btn" id="shuffle">Shuffle</button>
+  </div>
+
+  <nav class="strip" id="strip" aria-label="All shared items"></nav>
+
+  <div class="split">
+    <div>
+      <p class="subhead" id="evHead">Who said it</p>
+      <ul class="lines" id="evidence"></ul>
+    </div>
+    <div>
+      <p class="subhead">The fifty <span id="roomCount"></span></p>
+      <p class="room" id="room"></p>
+    </div>
+  </div>
+
+  <section class="s" aria-labelledby="tH">
+    <h2 class="sec" id="tH">Seven places everyone wants to stand</h2>
+    <p class="lede">Group the words by what they promise and the map gets crowded fast. Open a territory to see who's camped there.</p>
+    <ul class="terr" id="terr"></ul>
+  </section>
+
+  <section class="s" aria-labelledby="gH">
+    <h2 class="sec" id="gH">Write a B2B tagline</h2>
+    <p class="lede">Built only from words these fifty brands already use. The small number is how many of them got there first. Tap a word to see who.</p>
+    <p class="gen" id="gen" aria-live="polite"></p>
+    <button type="button" class="btn" id="genBtn">Write another</button>
+  </section>
+
+  <section class="s" aria-labelledby="qH">
+    <h2 class="sec" id="qH">Guess who said it</h2>
+    <p class="lede">If a tagline is doing its job, this should be easy.</p>
+    <div class="quiz">
+      <p class="qline" id="qline"></p>
+      <div class="opts" id="opts"></div>
+      <div class="qfoot">
+        <p class="fb" id="fb" aria-live="polite"></p>
+        <button type="button" class="btn line" id="qNext" hidden>Next line</button>
+        <span class="score" id="score"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="s" aria-labelledby="lH">
+    <h2 class="sec" id="lH">Words only one brand used</h2>
+    <p class="lede">The short list of words nobody else in the fifty has touched. Most distinctiveness lives here.</p>
+    <p class="loners" id="loners"></p>
+  </section>
+
+  <footer>
+    <div>
+      <p>Lines were collected from brand websites, press releases and annual reports, and reflect what each brand leads with as of September 2026. Where a brand has moved on, its earlier line is included and marked. Mission and purpose statements are marked where a brand leads with one instead of a tagline.</p>
+    </div>
+    <div>
+      <p>Counting is by brand, not by line: a brand that uses a word twice still counts once. Close variants are grouped, so “building” counts with “build” and “engineered” with “engineering”.</p>
+      <p>Taglines change quickly. If one here has moved on, the point probably still stands.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
